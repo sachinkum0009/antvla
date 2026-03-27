@@ -1,0 +1,19 @@
+[project]
+authors = [{name = "Sachin Kumar", email = "sachinkumar.ar97@gmail.com"}]
+dependencies = []
+name = "antvla"
+requires-python = ">= 3.12"
+version = "0.1.0"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.pypi-dependencies]
+antvla = { path = ".", editable = true }
+
+[tool.pixi.tasks]

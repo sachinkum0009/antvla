@@ -1,0 +1,20 @@
+[workspace]
+authors = ["Sachin Kumar <sachinkumar.ar97@gmail.com>"]
+channels = ["conda-forge"]
+name = "antvla"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[system-requirements]
+cuda = "13.0"
+
+[tasks]
+encode = "python src/antvla/encoder.py"
+
+[dependencies]
+pytorch-gpu = ">=2.10.0,<3"
+transformers = ">=5.4.0,<6"
+
+[feature.test.dependencies]
+pytest = "*"
+pre-commit = "*"
